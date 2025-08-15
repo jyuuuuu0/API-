@@ -1,9 +1,12 @@
-const apikey= '57d776b3';
+import config from "./config.js";
+const {API_KEY}=config;
 
+
+document.querySelector('#btn').addEventListener("click", searchMovie);
 function searchMovie(){
     const title=document.getElementById('ss').value;
     const movieinfo = document.getElementById('movie-info');
-    fetch(`https://www.omdbapi.com/?t=${title}&apikey=${apikey}`)
+    fetch(`https://www.omdbapi.com/?t=${title}&apikey=${API_KEY}`)
         .then(response=>response.json())
         .then(data=>{
             if(data.Response==='True'){
