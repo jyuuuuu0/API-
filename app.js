@@ -1,4 +1,4 @@
-const apikey= '57d776b3';
+const apikey= '';
 
 function searchMovie(){
     const title=document.getElementById('ss').value;
